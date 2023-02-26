@@ -22,7 +22,9 @@ namespace Nodo_Tecnologico
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            SetSupportActionBar (toolbar);
+            //Sustituye el nombre de app_name y lo coloca en blanco dentro del navbar
+            SupportActionBar.Title = "";
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
