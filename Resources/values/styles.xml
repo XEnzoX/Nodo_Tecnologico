@@ -1,5 +1,6 @@
 <resources>
     <attr name="colorCard" format="color"/>
+    <attr name="colorCardSub" format="color" />
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -7,6 +8,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorCard">@color/colorCard</item>
+        <item name="colorCardSub">@color/colorCardSub</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

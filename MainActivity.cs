@@ -1,8 +1,10 @@
 ﻿using System;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.Core.View;
@@ -21,7 +23,9 @@ namespace Nodo_Tecnologico
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+
+            //modificado (por defecto)  toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar (toolbar);
             //Sustituye el nombre de app_name y lo coloca en blanco dentro del navbar
             SupportActionBar.Title = "";
@@ -73,6 +77,17 @@ namespace Nodo_Tecnologico
             View view = (View) sender;
             Snackbar.Make(view, "Replace MS", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+
+
+            //enlace e-mail
+            //TextView emailTextView = FindViewById<TextView>(Resource.Id.emailTextView);
+            //emailTextView.Click += (sender, e) =>
+            //{
+            //    Intent emailIntent = new Intent(Intent.ActionSend);
+            //    emailIntent.SetType("message/rfc822");
+            //    emailIntent.PutExtra(Intent.ExtraEmail, new string[] { "informes@nodosde.gob.ar" });
+            //    StartActivity(Intent.CreateChooser(emailIntent, "Mandanos un E-mail: "));
+            //};
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)
@@ -83,26 +98,26 @@ namespace Nodo_Tecnologico
             {
                 // Handle the camera action
             }
-            else if (id == Resource.Id.nav_gallery)
-            {
+            //else if (id == Resource.Id.nav_gallery)
+            //{
 
-            }
-            else if (id == Resource.Id.nav_slideshow)
-            {
+            //}
+            //else if (id == Resource.Id.nav_slideshow)
+            //{
 
-            }
-            else if (id == Resource.Id.nav_manage)
-            {
+            //}
+            //else if (id == Resource.Id.nav_manage)
+            //{
 
-            }
+            //}
             else if (id == Resource.Id.nav_share)
             {
 
             }
-            else if (id == Resource.Id.nav_send)
-            {
+            //else if (id == Resource.Id.nav_send)
+            //{
 
-            }
+            //}
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
@@ -114,6 +129,9 @@ namespace Nodo_Tecnologico
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        
+
     }
 }
 

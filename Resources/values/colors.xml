@@ -5,4 +5,5 @@
     <color name="colorTertiary">#5c3afa</color>
     <color name="colorAccent">#3498db</color>
     <color name="colorCard">#33CCFF</color>
+    <color name="colorCardSub">#122744</color>
 </resources>

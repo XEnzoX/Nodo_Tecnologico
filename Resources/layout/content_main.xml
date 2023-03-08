@@ -5,32 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/gradient_content_main">
     
-   <FrameLayout
-           android:orientation="vertical"
-     android:layout_width="fill_parent"
-     android:layout_height="fill_parent"
-     android:gravity="center_horizontal"
-     android:padding="5dp"
-              android:background="?attr/colorCard">
     
-        <androidx.cardview.widget.CardView
-             android:layout_width="fill_parent"
-             android:layout_height="245dp"
-             android:layout_gravity="center_horizontal"/>
-     
-        <!--<TextView
-         android:text="Basic CardView"
-         android:layout_marginTop="0dp"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:gravity="center"
-         android:layout_centerVertical="true"
-         android:layout_alignParentRight="true"
-         android:layout_alignParentEnd="true" />-->
 
-    </FrameLayout>
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                 
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/nodoportada" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cards"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:padding="5dp"
+                    android:text="Nodo Tecnologico, punto de encuentro entre la Ciencia y la Tecnologia." />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:padding="5dp"
+                    android:text="Entidades" />
+                
 
 
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:id="@+id/imageView1"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/inti_logo" />
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:id="@+id/imageView2"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/logo_sapem" />
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:id="@+id/imageView3"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/logo_secretaria" />
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/afip_logo" />
+
+            </LinearLayout>
+
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cards"
+                android:orientation="vertical"
+                android:layout_margin="1dp"/>-->
+        </LinearLayout>
+
+    </ScrollView>
+
+    
 </RelativeLayout>
