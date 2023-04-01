@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/gradient_content_main">
+    
+    
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                 
+                <ImageView
+                    android:src="@mipmap/nodoportada"
+                    android:id="@id/my_image_view"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cards"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:padding="5dp"
+                    android:text="Graacias por tomarse tu tiempo para hacer una donación, la cual ayuda a que la Aplicación traiga nuevas funciones, como así diferentes cambios en el futuro." />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cards"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:padding="5dp"
+                    android:text="Transferencia a CVU (Clave Virtual Uniforme)
+Cuenta: Ualá
+CVU: 0000007900204193753156
+Alias: XENZOJAVIERX.UALA
+Nombre - Apellido: Enzo Javier Juan Saad
+CUIT: 20-41937531-5" />
+
+                <Button
+                    android:id="@+id/btndonate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_marginLeft="130dp"
+                    android:background="@color/colorAccent"
+                    android:text="Copiar CVU"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+ 
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/gradient_content_main">
+    
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                 
+                <ImageView
+                    android:src="@mipmap/nodoportada"
+                    android:id="@+id/my_image_view"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center" />
+
+               
+            </LinearLayout>
+               
+                <ImageView
+                    android:id="@+id/mapa_nodo"
+                    android:src="@mipmap/mapa"
+                    android:layout_width="450dp"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center" />
+
+             <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/colorCardSub"
+                    android:textSize="25dp"
+                    android:padding="90dp"
+                    android:text="Imagenes de ilustración" />
+                
+             <HorizontalScrollView
+                android:id="@+id/horizontal_scroll_view"
+                android:layout_width="420dp"
+                android:layout_height="300dp" 
+                android:layout_gravity="center">
+ 
+                <LinearLayout
+                    android:id="@+id/linear_layout_images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="10dp">
+ 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/nodo"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/nodo_01"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/nodo_02"/>
+
+                </LinearLayout>
+                <!--Solucionado por tio charly -->
+            </HorizontalScrollView>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorCardSub">
+
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:textSize="20dp"
+                    android:padding="16dp"
+                    android:text="Para ver la ubicación por GPS del Nodo Tecnológico, haz clic aquí: https://maps.google.com/?cid=11340108684541885175"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:textColorLink="@color/colorAccent" />
+            </LinearLayout>
+<!--https://www.google.com.ar/maps/place/Nodo+Tecnol%C3%B3gico/@-27.7620562,-64.2623608,14z/data=!4m6!3m5!1s0x943b53cc97f9d267:0x9d6028c42070faf7!8m2!3d-27.7583192!4d-64.2595622!16s%2Fg%2F11byyd5v99-->
+        </LinearLayout>
+
+    </ScrollView>
+    
+</RelativeLayout>

@@ -2,5 +2,5 @@
     <string name="app_name">Nodo Tecnologico</string>
     <string name="navigation_drawer_open">Abrir menu</string>
     <string name="navigation_drawer_close">Cerrar menu</string>
-    <string name="action_settings">App info</string>
+    <string name="action_settings">Version App: 1.0.0</string>
 </resources>
